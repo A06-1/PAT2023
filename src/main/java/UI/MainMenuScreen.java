@@ -286,11 +286,13 @@ public class MainMenuScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_ProductTypeFilterActionPerformed
 
     private void ProductStorageOutputTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductStorageOutputTextActionPerformed
-        // TODO add your handling code here:
+       String location = ProductManager.getLocation(selectedItemName); 
+            ProductStorageOutputText.setText(location);
     }//GEN-LAST:event_ProductStorageOutputTextActionPerformed
 
     private void ProductTypeOutputTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductTypeOutputTextActionPerformed
-       
+         String type = ProductManager.getType();
+            ProductTypeOutputText.setText(type);
         
     }//GEN-LAST:event_ProductTypeOutputTextActionPerformed
 
@@ -306,7 +308,7 @@ public class MainMenuScreen extends javax.swing.JFrame {
             String brandName = ProductManager.getBrand(selectedItemName);
             BrandProductOutputText.setText(brandName);
             
-//            String type = ProductManager.getType();
+            String type = ProductManager.getType();
             ProductTypeOutputText.setText(brandName);
 
             int cost = ProductManager.getCost(selectedItemName); 
